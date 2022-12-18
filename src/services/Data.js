@@ -8,7 +8,7 @@ const getAllProducts = () => {
 const postData = (data) => {
   return instance.post(`addproduct`, data);
 };
-const updateData = (data, id) => {
+const updateData = (id , data) => {
   return instance.put(`editproduct/${id}`, data);
 };
 const deleteData = (id) => {

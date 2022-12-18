@@ -15,7 +15,7 @@ export default class Products extends Component {
         .catch(err => console.log(err))
     }
     delPro=(id)=>{
-        if(window.confirm("Do u want to delete ?")){
+        if(window.confirm("Do you want to delete ?")){
             deleteData(id)
             .then(res=>{
                 if(res.data){
@@ -34,7 +34,7 @@ export default class Products extends Component {
                     {this.state.proData.map((pro) =>
                         <div className='col-sm-4' key={pro._id}>
                             <div className="card my-3" style={{width: '250px', height:'320px'}}>
-                                <img src={pro.image} class="card-img-top p-2" width={100} height={150} alt="..."/>
+                                <img src={pro.image} className="card-img-top p-2" width={100} height={150} alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">{pro.name}</h5>
                                     <p className="card-text">Rs. {pro.price}</p>
