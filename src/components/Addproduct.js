@@ -22,6 +22,7 @@ import withRouter from './withRouter';
     }
   render() {
     return (
+    
         <div>
         <h4 className='m-3 mb-2'> Add Data</h4>
         <form className='w-50' onSubmit={this.handleSubmit}>
@@ -33,7 +34,7 @@ import withRouter from './withRouter';
            <br/>
            <div className='form-group'>
                <label>Price</label>
-               <input type="number" pattern="/^[0-9]+$/" name="price" className="form-control"onChange={this.handler} required/>
+               <input type="number" min="10" max="100" name="price" className="form-control"onChange={this.handler} required/>            
            </div>
            <br/>
 

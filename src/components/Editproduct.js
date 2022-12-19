@@ -10,7 +10,7 @@ class Editproduct extends Component {
       price: "",
       quantity: "",
       description: "",
-      image: "",
+      image: ""
     };
     this.handleSubmit1 = this.handleSubmit1.bind(this);
     this.handler = this.handler.bind(this);
@@ -69,6 +69,7 @@ class Editproduct extends Component {
               onChange={this.handler}
             />
           </div>
+          <br/>
           <div className="form-group">
             <label>Price</label>
             <input
@@ -81,18 +82,20 @@ class Editproduct extends Component {
               onChange={this.handler}
             />
           </div>
+          <br/>
           <div className="form-group">
             <label>Quantity</label>
             <input
               type="number"
               name="quantity"
               pattern="/^[0-9]+$/"
-              className="form-control"
+              className="form-control w-25"
               value={this.state.quantity}
               required
               onChange={this.handler}
             />
           </div>
+          <br/>
           <div className="form-group">
             <label>Description</label>
             <input
@@ -103,7 +106,7 @@ class Editproduct extends Component {
               required
               onChange={this.handler}
             />
-          </div>{" "}
+          </div><br/>
           <div className="form-group">
             <label>Image URL</label>
             <input
@@ -117,7 +120,7 @@ class Editproduct extends Component {
           </div>
           <br />
           <button type="submit" className="btn btn-success">
-            Submit
+            Update Products
           </button>
         </form>
       </div>

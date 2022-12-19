@@ -5,6 +5,7 @@ import Editproduct from './components/Editproduct';
 import Nav from './components/Nav';
 import Products from './components/Products';
 import Homeclass from './components/Homeclass'
+import ViewProducts from './components/ViewProducts';
 function App() {
   return (
      <>
@@ -16,6 +17,7 @@ function App() {
              <Route path='/products' element={<Products/>}/>
              <Route path='/addproduct' element={<Addproduct/>}/>
              <Route path='/editproduct/:id' element={<Editproduct/>}/>
+             <Route path='/getproductbyid/:id' element={<ViewProducts/>}/>
           </Routes>
        </section>
      </Router>

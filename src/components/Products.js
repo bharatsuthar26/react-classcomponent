@@ -33,13 +33,14 @@ export default class Products extends Component {
         <div className='row'>
                     {this.state.proData.map((pro) =>
                         <div className='col-sm-4' key={pro._id}>
-                            <div className="card my-3" style={{width: '250px', height:'320px'}}>
+                            <div className="card my-3" style={{width: '350px', height:'320px'}}>
                                 <img src={pro.image} className="card-img-top p-2" width={100} height={150} alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">{pro.name}</h5>
                                     <p className="card-text">Rs. {pro.price}</p>
-                                    <Link to={`/editproduct/${pro._id}`} className='btn btn-primary'> Edit</Link>
-                                    <button className='btn btn-danger mx-3' onClick={()=> this.delPro(pro._id)}> Delete</button>
+                                    <Link to={`/getproductbyid/${pro._id}`} className='btn btn-dark'><i className='bi bi-eye'></i>View</Link>
+                                    <Link to={`/editproduct/${pro._id}`} className='btn btn-primary mx-2'><i className='bi bi-pencil'></i> Edit</Link>
+                                    <button className='btn btn-danger mx-2' onClick={()=> this.delPro(pro._id)}><i className='bi bi-trash'></i> Delete</button>
                                 </div>
                             </div>
                         </div>)}
